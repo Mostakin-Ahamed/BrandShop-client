@@ -2,31 +2,31 @@
     {
         "id": 1,
         "title": "Audi",
-        "thumbnail_image": "https://i.ibb.co/KsWXKGs/Audi.jpg"
+        "thumbnail_image": "https://i.ibb.co/Nts2V5y/Audi.jpg"
     },
     {
         "id": 2,
         "title": "Rolls Royce",
-        "thumbnail_image": "https://i.ibb.co/wRfQtBS/rollsroyce.jpg"
+        "thumbnail_image": "https://i.ibb.co/0QtftNz/rollsroyce.jpg"
     },
     {
         "id": 3,
         "title": "Mercedes-Benz",
-        "thumbnail_image": "https://i.ibb.co/v4MjkYj/mercedes-logo-1.jpg"
+        "thumbnail_image": "https://i.ibb.co/5Rg27Xd/Mercedes-Logo-history.jpg"
     },
     {
         "id": 4,
         "title": "Lamborghini",
-        "thumbnail_image": "https://i.ibb.co/B25czGG/Lambo.jpg"
+        "thumbnail_image": "https://i.ibb.co/SKKNvc6/Lambo.jpg"
     },
     {
         "id": 5,
         "title": "Ferrari",
-        "thumbnail_image": "https://i.ibb.co/84cq695/Ferrari.jpg"
+        "thumbnail_image": "https://i.ibb.co/fQc3s94/Ferrari.jpg"
     },
     {
         "id": 6,
         "title": "BMW",
-        "thumbnail_image": "https://i.ibb.co/7zJ4G82/bmw.png"
+        "thumbnail_image": "https://i.ibb.co/vJkZZLR/bmw-logo.jpg"
     }
 ]
