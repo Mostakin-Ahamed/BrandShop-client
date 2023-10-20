@@ -2,31 +2,37 @@
     {
         "id": 1,
         "title": "Audi",
-        "thumbnail_image": "https://i.ibb.co/Nts2V5y/Audi.jpg"
+        "thumbnail_image": "https://i.ibb.co/Nts2V5y/Audi.jpg",
+        "brandName":"Audi"
     },
     {
         "id": 2,
         "title": "Rolls Royce",
-        "thumbnail_image": "https://i.ibb.co/0QtftNz/rollsroyce.jpg"
+        "thumbnail_image": "https://i.ibb.co/0QtftNz/rollsroyce.jpg",
+        "brandName":"Rolls Royce"
     },
     {
         "id": 3,
         "title": "Mercedes-Benz",
-        "thumbnail_image": "https://i.ibb.co/5Rg27Xd/Mercedes-Logo-history.jpg"
+        "thumbnail_image": "https://i.ibb.co/5Rg27Xd/Mercedes-Logo-history.jpg",
+        "brandName":"Mercedes-Benz"
     },
     {
         "id": 4,
         "title": "Lamborghini",
-        "thumbnail_image": "https://i.ibb.co/SKKNvc6/Lambo.jpg"
+        "thumbnail_image": "https://i.ibb.co/SKKNvc6/Lambo.jpg",
+        "brandName":"Lamborghini"
     },
     {
         "id": 5,
         "title": "Ferrari",
-        "thumbnail_image": "https://i.ibb.co/fQc3s94/Ferrari.jpg"
+        "thumbnail_image": "https://i.ibb.co/fQc3s94/Ferrari.jpg",
+        "brandName":"Ferrari"
     },
     {
         "id": 6,
         "title": "BMW",
-        "thumbnail_image": "https://i.ibb.co/vJkZZLR/bmw-logo.jpg"
+        "thumbnail_image": "https://i.ibb.co/vJkZZLR/bmw-logo.jpg",
+        "brandName":"BMW"
     }
 ]
