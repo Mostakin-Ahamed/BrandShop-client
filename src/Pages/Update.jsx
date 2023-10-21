@@ -33,7 +33,7 @@ const Update = () => {
             confirmButtonText: 'Yes, Update it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/update/${_id}`, {
+                fetch(`https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/update/${_id}`, {
                     method: 'PUT',
                     headers:{
                         'content-type':'application/json'

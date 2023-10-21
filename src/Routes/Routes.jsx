@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         {
           path:'/cart',
           element:<PrivateRoute><Cart></Cart></PrivateRoute>,
-          loader: ()=> fetch('http://localhost:5000/cart')
+          loader: ()=> fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/cart')
         },
         {
             path:'/addProducts',
@@ -46,13 +46,13 @@ const router = createBrowserRouter([
         {
           path:'/update/:id',
           element:<PrivateRoute><Update></Update></PrivateRoute>,
-          loader: ({params})=>fetch(`http://localhost:5000/update/${params.id}`)
+          loader: ({params})=>fetch(`https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/update/${params.id}`)
         },
         
         {
           path:'/brandDetail',
           element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute> ,
-          loader: ()=> fetch('http://localhost:5000/brandDetail')
+          loader: ()=> fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/brandDetail')
         },
         {
           path:'/BrandCars',
@@ -61,38 +61,38 @@ const router = createBrowserRouter([
         {
           path:'/brandDetail/Audi',
           element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
-          loader: ()=> fetch('http://localhost:5000/brandDetail/Audi')
+          loader: ()=> fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/brandDetail/Audi')
         },
         {
           path:'/brandDetail/BMW',
           element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
-          loader: ()=> fetch('http://localhost:5000/brandDetail/BMW')
+          loader: ()=> fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/brandDetail/BMW')
         },
         {
           path:'/brandDetail/Ferrari',
           element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
-          loader: ()=> fetch('http://localhost:5000/brandDetail/Ferrari')
+          loader: ()=> fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/brandDetail/Ferrari')
         },
         {
           path:'/brandDetail/Rolls Royce',
           element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
-          loader: ()=> fetch('http://localhost:5000/brandDetail/Rolls Royce')
+          loader: ()=> fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/brandDetail/Rolls Royce')
         },
         {
           path:'/brandDetail/Lamborghini',
           element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
           errorElement:<ErrorPage></ErrorPage>,
-          loader: ()=> fetch('http://localhost:5000/brandDetail/Lamborghini')
+          loader: ()=> fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/brandDetail/Lamborghini')
         },
         {
           path:'/brandDetail/Mercedes-Benz',
           element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
-          loader: ()=> fetch('http://localhost:5000/brandDetail/Mercedes-Benz')
+          loader: ()=> fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/brandDetail/Mercedes-Benz')
         },
         {
           path:'/singleCarDetail/:_id',
           element:<PrivateRoute><SingleCarDetail></SingleCarDetail></PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/brandDetail')
+          loader:()=>fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/brandDetail')
         }
         
       ]

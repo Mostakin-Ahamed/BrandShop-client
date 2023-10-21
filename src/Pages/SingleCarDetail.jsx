@@ -22,7 +22,7 @@ const SingleCarDetail = () => {
         const rating = details.rating;
         console.log(email, productId);
         const newCart = {email, productId, productName, price,brandName, photo, rating}
-        fetch('http://localhost:5000/cart',{
+        fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/cart',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

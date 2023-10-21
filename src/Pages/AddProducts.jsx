@@ -17,7 +17,7 @@ const AddProducts = () => {
         console.log(newCar);
         formRef.current?.reset();
 
-        fetch('http://localhost:5000/addProducts',{
+        fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/addProducts',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
