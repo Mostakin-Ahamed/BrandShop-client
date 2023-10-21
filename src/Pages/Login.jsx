@@ -25,7 +25,7 @@ const Login = () => {
             console.log(result);
             Swal.fire({
                 title: 'Success!',
-                text: 'New car added successfully!',
+                text: 'Logged in successfully!',
                 icon: 'success',
                 confirmButtonText: 'Cool'
               })
