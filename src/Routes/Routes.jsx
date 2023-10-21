@@ -11,6 +11,7 @@ import BrandDetail from "../Pages/BrandDetail.jsx";
 import BrandCars from "../Pages/BrandCars.jsx";
 import ErrorPage from "../Components/ErrorPages/ErrorPage.jsx";
 import SingleCarDetail from "../Pages/SingleCarDetail.jsx";
+import CartErrorPage from "../Components/ErrorPages/CartErrorPage.jsx";
 // import SingleCarDetail from "../Pages/SingleCarDetail.jsx";
 
 
@@ -81,7 +82,7 @@ const router = createBrowserRouter([
         {
           path:'/brandDetail/Lamborghini',
           element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
-          errorElement:<ErrorPage></ErrorPage>,
+          errorElement:<CartErrorPage></CartErrorPage>,
           loader: ()=> fetch('https://automobile-server-mnnpfh1ck-mostakin-ahameds-projects.vercel.app/brandDetail/Lamborghini')
         },
         {
