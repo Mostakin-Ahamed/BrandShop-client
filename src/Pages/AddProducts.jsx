@@ -13,7 +13,6 @@ const AddProducts = () => {
         const photo = form.get('imageURL');
         const detail = form.get('details');
         const rating = form.get('rating')
-        // const email = user.email
         const newCar = { productName, brandName, price, photo, detail, rating}
         console.log(newCar);
         formRef.current?.reset();

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FcGoogle } from 'react-icons/fc';
+import Swal from "sweetalert2";
 // import { toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
@@ -22,12 +23,23 @@ const Login = () => {
         signIn(email, password)
         .then(result =>{
             console.log(result);
-            // toast.success("Logged In Successfully")
+            Swal.fire({
+                title: 'Success!',
+                text: 'New car added successfully!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
             navigate(location?.state? location.state : '/' )
         })
         .catch(error=>{
             // toast.error(error.message);
             console.log(error.message);
+            Swal.fire({
+                title: 'Error!',
+                text: error.message,
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
         })
     }
 

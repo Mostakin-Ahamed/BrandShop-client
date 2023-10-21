@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from 'react-icons/fc';
 import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 const Register = () => {
 
@@ -36,7 +37,12 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                toast.success("User Created Successfully")
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User created successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
                 updateProfile(result.user, {
                     displayName: name,
                     photoURL:photo
@@ -50,7 +56,12 @@ const Register = () => {
             
             .catch(error => {
 
-                toast.error(error.message)
+                 Swal.fire({
+                    title: 'Error!',
+                    text: error.message,
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                  })
             })
     }
     const handleGoogleRegister = e =>{
