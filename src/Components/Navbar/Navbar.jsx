@@ -6,7 +6,6 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
-
     const handleSignOut = () => {
         logOut()
             .then()
@@ -34,7 +33,7 @@ const Navbar = () => {
                             }
                             {
                                 user && <>
-                                    <li><NavLink className="mx-3" to='/cart'>My Cart</NavLink></li>
+                                    <li><NavLink className="mx-3" to={`/cart/${user.email}`}>My Cart</NavLink></li>
                                     <li><NavLink className="mx-3" to='/addProducts'>Add Products</NavLink></li>
                                 </>
                             }

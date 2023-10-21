@@ -30,8 +30,14 @@ const router = createBrowserRouter([
             element:<Login></Login>
         },
         {
-            path:'/cart/:_id',
-            element: <PrivateRoute><Cart></Cart></PrivateRoute>
+          path:'/cart',
+          element:<PrivateRoute><Cart></Cart></PrivateRoute>,
+          loader: ()=> fetch('http://localhost:5000/cart')
+        },
+        {
+            path:'/cart/:email',
+            element: <PrivateRoute><Cart></Cart></PrivateRoute>,
+            loader: ()=> fetch('http://localhost:5000/cart/:email')
         },
         {
             path:'/addProducts',
@@ -91,39 +97,7 @@ const router = createBrowserRouter([
           element:<SingleCarDetail></SingleCarDetail>,
           loader:()=>fetch('http://localhost:5000/brandDetail')
         }
-        // ,
-        // {
-        //   path:'/brandDetail/Audi/:_id',
-        //   element:<SingleCarDetail></SingleCarDetail>,
-        //   loader: ()=> fetch('http://localhost:5000/brandDetail/Audi/:_id')
-        // },
-        // {
-        //   path:'/brandDetail/Mercedes-Benz/:_id',
-        //   element:<SingleCarDetail></SingleCarDetail>,
-        //   loader: ()=> fetch('http://localhost:5000/brandDetail/Mercedes-Benz/:_id')
-        // },
-        // {
-        //   path:'/brandDetail/Rolls Royce/:_id',
-        //   element:<SingleCarDetail></SingleCarDetail>,
-        //   loader: ()=> fetch('http://localhost:5000/brandDetail/Rolls Royce/:_id')
-        // },
-        // {
-        //   path:'/brandDetail/Ferrari/:_id',
-        //   element:<SingleCarDetail></SingleCarDetail>,
-        //   loader: ()=> fetch('http://localhost:5000/brandDetail/Ferrari/:_id')
-        // },
-        // {
-        //   path:'/brandDetail/Lamborghini/:_id',
-        //   element:<SingleCarDetail></SingleCarDetail>,
-        //   loader: ()=> fetch('http://localhost:5000/brandDetail/Lamborghini/:_id')
-        // },
-        // {
-        //   path:'/brandDetail/BMW/:_id',
-        //   element:<SingleCarDetail></SingleCarDetail>,
-        //   loader: ()=> fetch('http://localhost:5000/brandDetail/BMW/:_id')
-        // }
-
-
+        
       ]
     },
   ]);

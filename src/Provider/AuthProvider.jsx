@@ -42,7 +42,6 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password)
         
     }
-
     
     const provider = new GoogleAuthProvider();
 

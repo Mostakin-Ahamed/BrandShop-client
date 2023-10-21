@@ -16,8 +16,13 @@ const SingleCarDetail = () => {
         e.preventDefault();
         const email = user.email;
         const productId=details._id;
+        const productName=details.productName;
+        const brandName=details.brandName;
+        const price=details.price;
+        const photo = details.photo;
+        const rating = details.rating;
         console.log(email, productId);
-        const newCart = {email, productId}
+        const newCart = {email, productId, productName, price,brandName, photo, rating}
         fetch('http://localhost:5000/cart',{
             method: 'POST',
             headers:{
@@ -28,10 +33,10 @@ const SingleCarDetail = () => {
         .then(res => res.json())
         .then(data =>{
             console.log(data);
-            if(data.insertedID){
+            if(data.insertedId){
                 Swal.fire({
                     title: 'Success!',
-                    text: 'New car added successfully!',
+                    text: 'Car added to cart!',
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })
@@ -44,8 +49,6 @@ const SingleCarDetail = () => {
         const findCar = allCars.find(brand => brand._id == params._id)
         setDetails(findCar)
     }, [params._id, allCars],)
-    console.log(details.productName);
-    console.log(details._id);
 
     return (
         <div >
@@ -63,7 +66,7 @@ const SingleCarDetail = () => {
                         <h2 className="card-title mb-5">Name: {details.productName}</h2>
                         <h2 className="card-title">Rating: {details.rating}/10</h2>
                         <p className="mb-5">{details.detail}</p>
-                        <button onClick={addToCart} className="btn h-auto w-auto text-center border-none text-black font-medium ">Add to cart </button>
+                        <button onClick={addToCart} className="btn btn-outline btn-warning h-auto w-auto text-center border-none text-black font-medium ">Add to cart </button>
 
                     </div>
                 </div>
