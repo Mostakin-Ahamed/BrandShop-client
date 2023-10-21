@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from 'react-icons/fc';
 import { updateProfile } from "firebase/auth";
@@ -25,12 +24,21 @@ const Register = () => {
         const photo = form.get('photoURL');
         
         if(password.length<6){
-            toast.error("Password must be 6 characters or longer!");
-            // alert("Password must be 6 characters or longer!")
+            Swal.fire({
+                title: 'Error!',
+                text: 'Password must be 6 characters or longer!',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
             return;
         }
         else if(!/[A-Z]/.test(password)){
-            toast.error("Your password should have at least one uppercase character")
+            Swal.fire({
+                title: 'Error!',
+                text: 'Password must be 6 characters or longer!',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
             return;
         }
 

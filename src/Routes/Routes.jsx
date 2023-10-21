@@ -51,47 +51,47 @@ const router = createBrowserRouter([
         
         {
           path:'/brandDetail',
-          element:<BrandDetail></BrandDetail>,
+          element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute> ,
           loader: ()=> fetch('http://localhost:5000/brandDetail')
         },
         {
           path:'/BrandCars',
-          element:<BrandCars></BrandCars>
+          element:<PrivateRoute><BrandCars></BrandCars></PrivateRoute> 
         },
         {
           path:'/brandDetail/Audi',
-          element:<BrandDetail></BrandDetail>,
+          element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
           loader: ()=> fetch('http://localhost:5000/brandDetail/Audi')
         },
         {
           path:'/brandDetail/BMW',
-          element:<BrandDetail></BrandDetail>,
+          element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
           loader: ()=> fetch('http://localhost:5000/brandDetail/BMW')
         },
         {
           path:'/brandDetail/Ferrari',
-          element:<BrandDetail></BrandDetail>,
+          element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
           loader: ()=> fetch('http://localhost:5000/brandDetail/Ferrari')
         },
         {
           path:'/brandDetail/Rolls Royce',
-          element:<BrandDetail></BrandDetail>,
+          element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
           loader: ()=> fetch('http://localhost:5000/brandDetail/Rolls Royce')
         },
         {
           path:'/brandDetail/Lamborghini',
-          element:<BrandDetail></BrandDetail>,
+          element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
           errorElement:<ErrorPage></ErrorPage>,
           loader: ()=> fetch('http://localhost:5000/brandDetail/Lamborghini')
         },
         {
           path:'/brandDetail/Mercedes-Benz',
-          element:<BrandDetail></BrandDetail>,
+          element:<PrivateRoute><BrandDetail></BrandDetail></PrivateRoute>,
           loader: ()=> fetch('http://localhost:5000/brandDetail/Mercedes-Benz')
         },
         {
           path:'/singleCarDetail/:_id',
-          element:<SingleCarDetail></SingleCarDetail>,
+          element:<PrivateRoute><SingleCarDetail></SingleCarDetail></PrivateRoute>,
           loader:()=>fetch('http://localhost:5000/brandDetail')
         }
         

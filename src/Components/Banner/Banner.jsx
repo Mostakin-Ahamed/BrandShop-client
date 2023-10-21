@@ -13,7 +13,7 @@ const Banner = () => {
                             Looking for your next car?
                         </h1>
                         <h1 className="font-bold flex justify-center mb-20 text-black text-6xl text-center">
-                            <span className="text-green-500">We have the right car for you!</span>
+                            <span className="text-orange-500">We have the right car for you!</span>
                         </h1>
 
                     </div>
