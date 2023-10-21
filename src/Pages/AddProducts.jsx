@@ -1,10 +1,8 @@
 import {  useRef } from "react";
 import Swal from 'sweetalert2'
-// import { AuthContext } from "../Provider/AuthProvider";
 
 const AddProducts = () => {
-    // const Swal = require('sweetalert2')
-    // const { user } = useContext(AuthContext)
+   
     const formRef = useRef()
     const handleNewProduct = e => {
         e.preventDefault();
@@ -30,7 +28,7 @@ const AddProducts = () => {
         .then(res => res.json())
         .then(data =>{
             console.log(data);
-            if(data.insertedID){
+            if(data.insertedId){
                 Swal.fire({
                     title: 'Success!',
                     text: 'New car added successfully!',

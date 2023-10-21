@@ -19,9 +19,8 @@ const BrandCars = ({ brand }) => {
                             <h1 className="text-4xl my-2 font-bold">{productName}</h1>
                             <p className="text-2xl my-2">Price: ${price}</p>
                             <p className="text-2xl my-2"> Rating: {rating} /10</p>
-                            {/* <p className="py-6">{detail.slice(0,60)}</p> */}
-                            <Link to={`/singleCarDetail/${_id}`} params={_id}><button className="btn btn-primary">See Details</button></Link>
-                            <Link to={`/singleCarDetail/${_id}`} params={_id}><button className="btn btn-primary">Update</button></Link>
+                            <Link to={`/singleCarDetail/${_id}`} params={_id}><button className="btn btn-sm btn-primary m-2">See Details</button></Link>
+                            <Link to={`/update/${_id}`} params={_id}><button className="btn  btn-sm  m-2 btn-warning">Update</button></Link>
                         </div>
                     </div>
                 </div>

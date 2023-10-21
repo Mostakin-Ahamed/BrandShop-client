@@ -66,7 +66,7 @@ const SingleCarDetail = () => {
                         <h2 className="card-title mb-5">Name: {details.productName}</h2>
                         <h2 className="card-title">Rating: {details.rating}/10</h2>
                         <p className="mb-5">{details.detail}</p>
-                        <button onClick={addToCart} className="btn btn-outline btn-warning h-auto w-auto text-center border-none text-black font-medium ">Add to cart </button>
+                        <button onClick={addToCart} className="btn btn-warning h-auto w-auto text-center border-none text-black font-medium ">Add to cart </button>
 
                     </div>
                 </div>
