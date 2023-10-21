@@ -1,22 +1,14 @@
-// import { useEffect } from "react";
-// import { useState } from "react";
+
 import { useLoaderData } from "react-router-dom";
 import BrandCars from "./BrandCars";
-import ErrorPage from "./ErrorPage";
-// import SingleBrandDetail from "./SingleBrandDetail";
+import ErrorPage from "../Components/ErrorPages/ErrorPage";
+
 
 const BrandDetail = () => {
     const brands = useLoaderData();
     console.log(brands);
 
-    // const [details, setDetails]=useState([])
-    // const params= useParams()
-
-    // useEffect(()=>{
-    //     const findCar = brands.find(brand =>brand.brandName != params.brandName)
-    //     setDetails(findCar)
-    // },[params.brandName , brands],)
-    // console.log(details);
+ 
 
     return (
         <div>

@@ -9,7 +9,7 @@ import PrivateRoute from "./PrivateRoute.jsx";
 import Update from "../Pages/Update.jsx";
 import BrandDetail from "../Pages/BrandDetail.jsx";
 import BrandCars from "../Pages/BrandCars.jsx";
-import ErrorPage from "../Pages/ErrorPage.jsx";
+import ErrorPage from "../Components/ErrorPages/ErrorPage.jsx";
 import SingleCarDetail from "../Pages/SingleCarDetail.jsx";
 // import SingleCarDetail from "../Pages/SingleCarDetail.jsx";
 
@@ -19,11 +19,12 @@ const router = createBrowserRouter([
     {
       path: "/",
       element:<MainLayout></MainLayout>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
             path:'/',
             element:<Home></Home>,
-            loader: ()=> fetch('./categories.json')
+            loader: ()=> fetch('categories.json')
         },
         {
             path:'/login',

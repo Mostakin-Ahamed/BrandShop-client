@@ -12,8 +12,7 @@ const SingleCarDetail = () => {
     const params = useParams()
     const [details, setDetails] = useState({})
 
-    const addToCart = e => {
-        e.preventDefault();
+    const addToCart = () => {
         const email = user.email;
         const productId=details._id;
         const productName=details.productName;

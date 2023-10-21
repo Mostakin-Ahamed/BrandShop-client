@@ -6,6 +6,7 @@ import { useContext } from "react";
 const CartCard = ({ cart }) => {
 
     const { user } = useContext(AuthContext);
+    console.log(cart);
 
     // eslint-disable-next-line react/prop-types
     const {_id, productName, rating, price, photo, brandName, email } = cart;
@@ -43,7 +44,7 @@ const CartCard = ({ cart }) => {
     return (
         <div>
             {
-                email == user.email && <div className="flex items-center justify-center w-full">
+                 email == user.email && <div className="flex items-center justify-center w-full">
                     <div className="hero w-full">
                         <div className="hero-content flex-col lg:flex-row">
                             <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
