@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             element:<Login></Login>
         },
         {
-            path:'/cart',
+            path:'/cart/:_id',
             element: <PrivateRoute><Cart></Cart></PrivateRoute>
         },
         {
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/update',
-          element:<Update></Update>,
+          element:<PrivateRoute><Update></Update></PrivateRoute>,
         },
         
         {

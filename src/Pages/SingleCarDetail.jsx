@@ -1,20 +1,51 @@
-import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import {  useLoaderData, useParams } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const SingleCarDetail = () => {
 
-    const allCars = useLoaderData();
-    console.log(allCars);
-    const params = useParams()
-    console.log(params._id);
+    const { user } = useContext(AuthContext);
 
+    // params={email}
+    const allCars = useLoaderData();
+    const params = useParams()
     const [details, setDetails] = useState({})
+
+    const addToCart = e => {
+        e.preventDefault();
+        const email = user.email;
+        const productId=details._id;
+        console.log(email, productId);
+        const newCart = {email, productId}
+        fetch('http://localhost:5000/cart',{
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newCart)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            if(data.insertedID){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'New car added successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
+
+    }
 
     useEffect(() => {
         const findCar = allCars.find(brand => brand._id == params._id)
         setDetails(findCar)
     }, [params._id, allCars],)
     console.log(details.productName);
+    console.log(details._id);
 
     return (
         <div >
@@ -32,8 +63,8 @@ const SingleCarDetail = () => {
                         <h2 className="card-title mb-5">Name: {details.productName}</h2>
                         <h2 className="card-title">Rating: {details.rating}/10</h2>
                         <p className="mb-5">{details.detail}</p>
-                        <button className="btn h-auto w-auto text-center border-none text-black font-medium ">Add to cart </button>
-                        
+                        <button onClick={addToCart} className="btn h-auto w-auto text-center border-none text-black font-medium ">Add to cart </button>
+
                     </div>
                 </div>
 

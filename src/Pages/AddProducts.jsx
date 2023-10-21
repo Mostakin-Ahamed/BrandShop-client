@@ -7,9 +7,7 @@ const AddProducts = () => {
     // const { user } = useContext(AuthContext)
     const formRef = useRef()
     const handleNewProduct = e => {
-
         e.preventDefault();
-
         const form = new FormData(e.currentTarget);
         const productName = form.get('productName');
         const brandName = form.get('brandName');
@@ -18,7 +16,6 @@ const AddProducts = () => {
         const detail = form.get('details');
         const rating = form.get('rating')
         // const email = user.email
-
         const newCar = { productName, brandName, price, photo, detail, rating}
         console.log(newCar);
         formRef.current?.reset();
